@@ -1,0 +1,237 @@
+@import "definitions";
+@import "popup";
+@import "grid";
+
+body,html {
+	height:100%;
+}
+html {
+	overflow-y:hidden;
+}
+body {
+	background:url(cdn.orobind.com/srv/static/imagesV2//bg-new.jpg) center center fixed; overflow-y:scroll;
+	background-size:cover; background-repeat:no-repeat;
+	&.success {
+		background:white;
+	}
+}
+strong {
+	font-weight:900;
+}
+.hidden {
+	display:none;
+}
+.logoRow {
+	padding:20px; padding-bottom:0; text-align:center;
+	.logo {
+		height:25px; width:auto;
+	}
+	p {
+		color:$hard-grey;
+	}
+}
+body.success .logoRow {
+	@include background-image(linear-gradient(darken($dark-grey,10%),darken($hard-grey,10%)));
+}
+.applink {
+	color:white; line-height:2; padding: 10px; border:2px solid white; margin-left:20px;
+	text-decoration: none; font-family: $body-font; font-weight: 700;
+}
+hr.narrowcenter {
+	display:block; width:250px; margin:auto; margin-bottom:20px;
+	border: 2px solid $hard-grey; border-width:0 0 2px 0;
+	&.light {
+		border-color:white;
+	}
+}
+.metric {
+	color:white; padding:20px; text-align:center; margin-top:45px; visibility:hidden;
+	.metricWrap {
+		border:2px solid white; display:inline-block; padding:15px;
+		p {
+			margin-bottom:0; font-size:1.125em;
+		}
+		.metricValue {
+			font-size:2.625em; font-weight:bold; margin-bottom:0; line-height:1;
+			display:inline-block; vertical-align:middle; margin-left:15px;
+		}
+	}
+}
+.title {
+	padding:20px; color:white; display:flex; margin-bottom:10px;
+	flex-direction:row; justify-content:center; align-items:center;
+	h1 {
+		margin-bottom:0; font-size:1.4em; margin-bottom:15px;
+	}
+	p {
+		font-size:1em; line-height:1.6; font-weight:400;
+	}
+	p.successTitle {
+		font-size:1em;
+	}
+	.successCta {
+		height:50px; padding:10px; box-sizing:border-box; font-size:1.125em; margin-bottom:15px;
+		background:#EC2929; color:white; border-radius:0; font-weight:700;
+	}
+}
+body.success .title {
+	padding:inherit; color:$hard-grey; display:block;
+	.titleContainer {
+		margin-bottom:30px; padding:20px; box-shadow:0px 0px 5px 1px rgba($soft-grey,0.5);
+		background:white; color:$hard-grey;
+	}
+}
+section.finalCta {
+	justify-content:space-between; align-items:center;
+	.sectionTitle {
+		font-weight:300;
+	}
+	.landingForm {
+		.box {
+			margin-bottom:0;
+		}
+	}
+}
+.formRow, .finalCta {
+	text-align:center; margin-bottom:30px; display:flex; justify-content:center; align-items:center;
+	.landingFormFields, .landingFormCta {
+		height:40px; padding:10px; box-sizing:border-box; font-size:1.125em; width:100%;
+	}
+	.landingFormCta {
+		background:#EC2929/*#FF8B00*/; color:white; border-radius:0; font-weight:700;
+	}
+	.box {
+		position:relative; width:300px; margin-bottom:8px;
+		.status {
+			display:none; position:absolute; z-index:10;
+			right:10px; top:22px; width:16px; height:14px;
+			background:url("http://cdn.orobind.com/srv/static/imagesV2/rightwrong.png"); background-position:0 0;
+		}
+		&.error, &.successful {
+			.status {
+				display:inline-block;
+			}
+		}
+		&.error {
+			.status {
+				background-position:0 15px;
+			}
+		}
+	}
+}
+.finalCta {
+	text-align:center; padding:25px 0; color:white; background:rgba($dark-grey,0.95); margin-bottom:0;
+}
+section.finalCta {
+	padding:25px;
+}
+.postForm {
+	display:flex; flex-direction:row; justify-content:center; align-items:center;
+	p {
+		font-size:1.5em; line-height:1.8; color:white; text-align:center;
+	}
+}
+.centerWrap {
+	width:100%; margin:auto;
+}
+.sectionTitle {
+	text-align:center;
+}
+@media screen and (min-width:768px) {
+	body {
+		background-position:40% top;
+	}
+	.metric {
+		padding-top:15px;
+		text-shadow: 0 0 5px rgba(black,0.6);
+	}
+	.titleWrap {
+		text-align:center;
+		width:80%; padding-top:40px;
+		text-shadow: 0 0 5px rgba(black,0.6);
+	}
+	.logoRow {
+		text-align:left;
+		.logo {
+			height:35px;
+		}
+	}
+	.title {
+		h1 {
+			font-size:3em;
+		}
+		p {
+			font-size:1.35em;
+		}
+	}
+	body.success .title {
+		padding-top:50px; text-align:center;
+		.successTitle {
+			font-size:1.85em; margin-bottom:25px; margin-top:18px;
+		}
+		.desc {
+			margin-bottom:35px;
+		}
+	}
+	.postForm {
+		p {
+			width:80%;
+		}
+	}
+	.formRow, .finalCta {
+		text-align:right;
+		.box {
+			width:auto;
+		}
+		.landingForm {
+			display:flex; flex-direction:row; justify-content:center; align-items:center;
+		}
+		.landingFormFields, .landingFormCta {
+			margin-bottom:0;
+		}
+		.nameBox .landingFormFields {
+			width:175px;
+		}
+		.phoneBox .landingFormFields {
+			width:150px;
+		}
+		.emailBox .landingFormFields {
+			width:200px;
+		}
+		.submitBox .landingFormCta {
+			width:125px;
+		}
+	}
+}
+@media screen and (min-width:992px) {
+	.titleWrap {
+		width:75%; padding-top:245px;
+		.brwide:after {
+			content:''; clear:both;
+			display:block;
+		}
+	}
+	body.success .container {
+		width:880px;
+	}
+	.formRow, .finalCta {
+		.landingFormFields, .landingFormCta {
+			height:58px; padding:15px;
+		}
+		.nameBox .landingFormFields,
+		.phoneBox .landingFormFields {
+			width:225px;
+		}
+		.emailBox .landingFormFields {
+			width:275px;
+		}
+		.submitBox .landingFormCta {
+			width:125px;
+		}
+	}
+	section.finalCta {
+		.sectionTitle {
+			margin-bottom:0;
+		}
+	}
+}

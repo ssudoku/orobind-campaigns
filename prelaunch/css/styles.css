@@ -1,0 +1,325 @@
+html {
+	height:100%;
+}
+body {
+	margin:0; padding:0;
+	border:0; min-height:100%;
+	font-size:16px; line-height:1.5;
+	font-family: 'Lato', Helvetica, sans-serif;
+	background:url(../images/soft.jpg);
+}
+.topwrap {
+	background:url(../images/bg.jpg) no-repeat;
+	background-size:cover;
+	background-position:50% 0%;	
+}
+.bottomwrap {
+}
+.fullwidth {
+	width:100%;
+}
+img.fullwidth {
+	height:auto;
+	display:block;
+}
+.tcenter {
+	text-align:center;
+}
+.clearfix:after {
+	content:'';
+	display:table;
+	clear:both;
+	zoom:1;
+}
+.logo {
+	padding:15px;
+	height:55px; width:auto;
+	display:block;
+	margin:0 0 0 20px;
+}
+.title div, .signup div {
+	float:none;
+	margin:auto;
+	text-align:center;
+	color:white; line-height:1;
+}
+.title {
+	text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+	-moz-text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+	-webkit-text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+	margin-top:80px;
+	margin-bottom:20px;
+}
+.title h1 {
+	text-transform:uppercase;
+	font-size:1.5em;
+	font-weight:900;
+	margin-bottom:0.25em;
+}
+.title p {
+	font-weight:700;
+	font-size:1em;
+	margin-top:0;
+}
+.signup p {
+	text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+.signup input, .signup button {
+	border:0; padding:0;
+	margin:0; line-height:48px; height:48px;
+	padding-left:15px; padding-right:15px;
+	display:block; width:100%;
+	box-sizing:border-box;
+}
+.signup button {
+	background:#ffbd0b;
+	text-transform:capitalize;
+	color:#333;
+	margin-top:5px;
+}
+.signup button:hover {
+	background:#ffdc47;
+}
+.signup input {
+	color:#333;
+	text-align:center;
+}
+.downarrow {
+	cursor:pointer; width:65px; height:auto; margin-right:25px;
+	-webkit-animation-name: Floatingx;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: ease-in-out;
+    -moz-animation-name: Floating;
+    -moz-animation-duration: 2s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: ease-in-out;
+}
+@-webkit-keyframes Floatingx{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 10px);}
+    to {-webkit-transform: translate(0, -0px);    }    
+}    
+@-moz-keyframes Floating{
+    from {-moz-transform:translate(0, 0px);}
+    65% {-moz-transform:translate(0, 10px);}
+    to {-moz-transform: translate(0, -0px);}    
+}
+.indicator {
+	margin-top:50px;
+	padding-bottom:70px;
+}
+.logoband {
+	/*background:white;*/
+	padding:35px 15px 0 15px;
+	position:relative;
+}
+.bandlogo {
+	height:35px; width:auto;
+}
+img.icons {
+	height:40px; width:auto;
+	display:inline-block; vertical-align:top;
+}
+.bandleft {
+	position:absolute; left:15px; top:35px;
+}
+.bandright {
+	position:absolute; right:15px; top:25px;
+}
+span.phone {
+	font-size:24px; color:#999;
+	display:inline-block;
+	vertical-align:middle;
+	line-height:1; font-family: 'Roboto Slab';
+}
+.about, .testimonial {
+	padding:30px 20px 0 20px;
+	font-size:18px; line-height:2;
+	margin-bottom:25px;
+}
+.about {
+	font-family:'Roboto Slab'; text-align:center;
+}
+.about h2 {
+	font-size:34px;
+	margin-bottom:0;
+}
+.extra {
+	padding-top:100px;
+}
+h2 {
+	font-family: 'Roboto Slab'; font-size:2em;
+}
+.testimonial {
+	text-align:center;
+}
+.testimonial-container {
+	max-width:720px; min-width:300px; width:60%; margin:auto; background:rgba(255,255,255,0.8);
+	border:1px dashed #DCDCDC; overflow:hidden; padding:20px 10px 10px 10px;
+}
+.userpic {
+	border-radius:1000px; width:100px; height:auto; display:block; margin:auto;
+}
+.fixed {
+	transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease;
+	position:fixed; top:0; left:0; width:100%; background:white; z-index:100; padding-bottom:20px; padding-top:20px;
+	box-sizing:border-box; -webit-box-sizing:border-box; -moz-box-sizing:border-box;
+	box-shadow: 0 2px 4px #CCC; -webkit-box-shadow: 0 2px 4px #CCC; -moz-box-shadow: 0 2px 4px #CCC;
+}
+.user em, .user strong {
+	font-family:'Roboto Slab', serif; display:block;
+}
+.user strong {
+	color:#DF4949;
+}
+.user em {
+	font-size:0.6em;
+}
+.content p {
+	padding:0; margin:0;
+	position:relative; top:-10px;
+}
+.content {
+	position:relative; border-radius:10px; padding:0; box-sizing:border-box;
+	text-align:left;
+}
+.pageBlocks h2 {
+	margin-top:0;
+}
+.boxedquote, .boxedtwitter {
+	overflow:hidden;
+}
+.boxedtwitter img, .boxedtwitter span {
+	display:inline-block; vertical-align:middle; line-height:1;
+	font-family:'Roboto Slab',serif;
+}
+.boxedtwitter {
+	padding:0 10px 5px 10px;
+	right:25px; bottom:-20px;
+	font-size:14px;
+}
+.boxedtwitter img {
+	width:15px; height:auto;
+}
+.bottomsignup {
+	text-align:center;
+	margin-top:70px;
+	border-top:1px dashed #DCDCDC;
+	padding-top:10px;
+	padding-bottom:30px;
+	background:rgba(0,0,0,0.75);
+}
+.bottomsignup h1 {
+	text-transform:capitalize;
+	color:#FFF; margin-top:0;
+}
+.bottomsignup form {
+	margin-top:20px;
+}
+.bottomsignup input, .bottomsignup button {	
+	padding:0; margin:0; line-height:48px; height:48px;
+	padding-left:15px; padding-right:15px; border:0;
+	display:block; width:100%; box-sizing:border-box;
+}
+.bottomsignup button {
+	background:#FFBD0B; color:#333;
+	text-transform:capitalize;
+}
+.bottomsignup input {
+	text-align:center;
+	margin-bottom:10px;
+}
+.tright {
+	text-align:right;
+}
+@media screen and (min-width:480px){
+	.signup input, .signup button {
+		display:inline; width:auto;
+	}
+	.signup input {
+		text-align:left;
+	}
+	.signup button{
+		position:relative; left:-3px;
+	}
+	.title h1 {
+		font-size:2em;
+	}
+	.title {
+		margin-top:20px;
+		margin-bottom:40px;
+	}
+	.bottomsignup input, .bottomsignup button {	
+		display:inline-block; width:auto;
+		vertical-align:top;
+	}
+	.bottomsignup button {
+		position:relative; left:-5px;
+	}
+	.bottomsignup input {
+		text-align:left;
+	}
+}
+@media screen and (min-width:768px){
+	.topwrap {
+		background-position:40% 0%;
+	}
+	.title h1 {
+		font-size:2.5em;
+	}
+	.title p {
+		font-size:1.25em;
+	}
+	.title {
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	.indicator {
+		margin-top:100px;
+	}
+	.about{
+		padding:30px 80px 0 80px;		
+	}
+	.bottomsignup input {
+		width:300px;
+	}
+}
+@media screen and (min-width:900px) and (max-width:1287px){	
+	.breaksm:after {
+		content:'';
+		display:block;
+	}
+}
+@media screen and (min-width:992px){
+	.topwrap {
+		background-position:0% 0%;
+	}
+	.title {
+		margin-top:150px;
+		margin-bottom:40px;
+	}
+	.title h1 {
+	text-transform:uppercase;
+	font-size:3em;
+	font-weight:900;
+	margin-bottom:0.25em;
+	}
+	.title p {
+	font-weight:700;
+	font-size:2em;
+	margin-top:0;
+	}
+	.signup input {
+		width:300px;
+	}
+	.signup button {
+		position:relative; left:-3px;
+	}
+	.indicator {
+		margin-top:140px;
+	}
+	.about{
+		/*padding:30px 300px 0 300px;*/
+	}
+}

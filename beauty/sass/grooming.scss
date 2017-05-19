@@ -1,0 +1,164 @@
+@import "definitions";
+@import "popup";
+@import "grid";
+
+body,html {
+	height:100%;
+}
+html {
+	overflow-y:hidden;
+}
+body {
+	background:url(../images/bg-grooming.jpg) center center fixed; overflow-y:scroll;
+	background-size:cover; background-repeat:no-repeat;
+}
+strong {
+	font-weight:900;
+}
+.hidden {
+	display:none;
+}
+.priceRow {
+	text-align:center; color:white;
+	p {
+		font-size:1.435em; font-family:'Roboto', sans-serif;
+	}
+}
+.logoRow {
+	padding:20px; display:flex; flex-direction:row; justify-content:space-between; align-items:center;
+	.logo {
+		height:26px; width:auto;
+	}
+	.phone {
+		color:white; font-size:1.125em; font-family: 'Roboto', sans-serif;
+	}
+}
+.title {
+	padding:20px; color:white; display:flex; margin-bottom:10px; margin-top:10px;
+	flex-direction:row; justify-content:center; align-items:center;
+	h1 {
+		font-weight:900; margin-bottom:0;
+	}
+	p {
+		font-size:1.6em; line-height:1.8; font-family: 'Roboto', sans-serif; margin-bottom:0;
+	}
+	p.desc {
+		font-size:1.4em; margin-bottom:25px;
+	}
+	p.successTitle {
+		font-size:2.25em;
+	}
+	.successCta {
+		height:50px; padding:10px; box-sizing:border-box; font-size:1.125em; margin-bottom:15px;
+		background:$primary-color; color:white; border-radius:0; font-weight:700;
+	}
+}
+.formRow {
+	text-align:center; margin-bottom:30px;
+	.landingFormFields, .landingFormCta {
+		height:50px; padding:10px; box-sizing:border-box; font-size:1.125em; width:300px;
+	}
+	.landingFormCta {
+		background:$primary-color/*#FF8B00*/; color:white; border-radius:0; font-weight:700;
+	}
+	.box {
+		position:relative; width:100%; margin-bottom:15px;
+		.status {
+			display:none; position:absolute; z-index:10;
+			right:10px; top:22px; width:16px; height:14px;
+			background:url("../images/rightwrong.png"); background-position:0 0;
+		}
+		&.error, &.success {
+			.status {
+				display:inline-block;
+			}
+		}
+		&.error {
+			.status {
+				background-position:0 15px;
+			}
+		}
+	}
+}
+.postForm {
+	display:flex; flex-direction:row; justify-content:center; align-items:center;
+	p {
+		font-size:1.5em; line-height:1.8; color:white; text-align:center; font-family: 'Roboto', sans-serif;
+	}
+}
+@media screen and (min-width:768px) {
+	body {
+		background-position:40% top;
+	}
+	.titleWrap {
+		text-align:center;
+		width:75%; padding-top:80px;
+		text-shadow: 0 0 5px rgba(black,0.6);
+	}
+	.logoRow {
+		.logo {
+			height:42px;
+		}
+		.phone {
+			font-size:1.4em;
+		}
+	}
+	.title {
+		h1 {
+			font-size:3.775em;
+		}
+	}
+	.postForm {
+		p {
+			width:75%;
+		}
+	}
+	.formRow {
+		text-align:right;
+		.box {
+			width:auto;
+		}
+		.landingForm {
+			display:flex; flex-direction:row; justify-content:center; align-items:center;
+		}
+		.landingFormFields, .landingFormCta {
+			margin-bottom:0;
+		}
+		.nameBox .landingFormFields {
+			width:175px;
+		}
+		.phoneBox .landingFormFields {
+			width:150px;
+		}
+		.emailBox .landingFormFields {
+			width:200px;
+		}
+		.submitBox .landingFormCta {
+			width:125px;
+		}
+	}
+}
+@media screen and (min-width:992px) {
+	.titleWrap {
+		width:100%;
+		.brwide:after {
+			content:''; clear:both;
+			display:block;
+		}
+	}
+	.formRow {
+		.landingFormFields, .landingFormCta {
+			height:58px; padding:15px;
+		}
+		.nameBox .landingFormFields,
+		.phoneBox .landingFormFields {
+			width:225px;
+		}
+		.emailBox .landingFormFields {
+			width:275px;
+		}
+		.submitBox .landingFormCta {
+			width:125px;
+		}
+	}
+}

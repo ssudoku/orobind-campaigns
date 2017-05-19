@@ -1,0 +1,183 @@
+@import "definitions";
+@import "popup";
+@import "grid";
+
+body,html {
+	height:100%;
+}
+html {
+	overflow-y:hidden;
+}
+body {
+	background:url("../images/bg-injury.jpg") center center fixed; overflow-y:scroll;
+	background-size:cover; background-repeat:no-repeat;
+	&.success {
+		background:white;
+	}
+}
+strong {
+	font-weight:900;
+}
+.hidden {
+	display:none;
+}
+.logoRow {
+	padding:20px; text-align:left;
+	display:flex; flex-direction:row; justify-content:space-between; align-items:center;
+	.logo {
+		height:40px; width:auto;
+	}
+	p {
+		color:$hard-grey;
+	}
+}
+.success .logoRow {
+	@include background-image(linear-gradient(darken($dark-grey,10%),darken($hard-grey,10%)));
+}
+.applink {
+	color:white; line-height:2; padding: 10px; border:2px solid white; margin-left:20px;
+	text-decoration: none; font-family: $body-font; font-weight: 700;
+}
+.title {
+	padding:20px; color:white; display:flex; margin-bottom:10px; margin-top:10px;
+	flex-direction:row; justify-content:center; align-items:center;
+	h1 {
+		font-weight:900; margin-bottom:0;
+	}
+	p {
+		font-size:1.75em; line-height:1.8; font-family: 'Roboto', sans-serif; margin-bottom:0;
+	}
+	p.desc {
+		font-size:1.25em; margin-bottom:25px;
+	}
+	p.successTitle {
+		font-size:2.25em;
+	}
+	.successCta {
+		height:50px; padding:10px; box-sizing:border-box; font-size:1.125em; margin-bottom:15px;
+		background:$primary-color; color:white; border-radius:0; font-weight:700;
+	}
+}
+.success .title {
+	padding:inherit; color:$hard-grey; display:block;
+	.titleContainer {
+		margin-bottom:30px; padding:20px; box-shadow:0px 0px 5px 1px rgba($soft-grey,0.5);
+		background:white; color:$hard-grey;
+	}
+}
+.formRow {
+	text-align:center; margin-bottom:30px;
+	.landingFormFields, .landingFormCta {
+		height:50px; padding:10px; box-sizing:border-box; font-size:1.125em; width:300px;
+	}
+	.landingFormCta {
+		background:$primary-color/*#FF8B00*/; color:white; border-radius:0; font-weight:700;
+	}
+	.box {
+		position:relative; width:100%; margin-bottom:15px;
+		.status {
+			display:none; position:absolute; z-index:10;
+			right:10px; top:22px; width:16px; height:14px;
+			background:url("../images/rightwrong.png"); background-position:0 0;
+		}
+		&.error, &.success {
+			.status {
+				display:inline-block;
+			}
+		}
+		&.error {
+			.status {
+				background-position:0 15px;
+			}
+		}
+	}
+}
+.postForm {
+	display:flex; flex-direction:row; justify-content:center; align-items:center;
+	p {
+		font-size:1.5em; line-height:1.8; color:white; text-align:center; font-family: 'Roboto', sans-serif;
+	}
+}
+@media screen and (min-width:768px) {
+	body {
+		background-position:40% top;
+	}
+	.titleWrap {
+		text-align:center;
+		width:75%; padding-top:175px;
+		text-shadow: 0 0 5px rgba(black,0.6);
+		&.pregnancy {
+			padding-top:175px;
+		}
+	}
+	.title {
+		h1 {
+			font-size:3.25em;
+		}
+	}
+	.success .title {
+		padding-top:50px; text-align:center;
+		.successTitle {
+			font-size:1.85em; margin-bottom:25px; margin-top:18px;
+		}
+		.desc {
+			margin-bottom:35px;
+		}
+	}
+	.postForm {
+		p {
+			width:75%;
+		}
+	}
+	.formRow {
+		text-align:right;
+		.box {
+			width:auto;
+		}
+		.landingForm {
+			display:flex; flex-direction:row; justify-content:center; align-items:center;
+		}
+		.landingFormFields, .landingFormCta {
+			margin-bottom:0;
+		}
+		.nameBox .landingFormFields {
+			width:175px;
+		}
+		.phoneBox .landingFormFields {
+			width:150px;
+		}
+		.emailBox .landingFormFields {
+			width:200px;
+		}
+		.submitBox .landingFormCta {
+			width:125px;
+		}
+	}
+}
+@media screen and (min-width:992px) {
+	.titleWrap {
+		width:100%;
+		.brwide:after {
+			content:''; clear:both;
+			display:block;
+		}
+	}
+	.container {
+		width:880px;
+	}
+	.formRow {
+		.landingFormFields, .landingFormCta {
+			height:58px; padding:15px;
+		}
+		.nameBox .landingFormFields,
+		.phoneBox .landingFormFields {
+			width:225px;
+		}
+		.emailBox .landingFormFields {
+			width:275px;
+		}
+		.submitBox .landingFormCta {
+			width:125px;
+		}
+	}
+}

@@ -1,0 +1,1 @@
+Each folder contains the landing page for a particular campaign run by Orobind.in

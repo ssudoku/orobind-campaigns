@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Stay fit and healthy.</title>
+		<link rel="icon" type="image/ico" href="http://cdn.orobind.com/srv/static/imagesV2/favicon.ico">
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.min.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+		
+		<link href="css/physio.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,900|Lato:400,900' rel='stylesheet' type='text/css'>
+	<!--include jquery-->
+	<script src="js/jquery.min.js"></script>
+	</head>
+	
+	<body class="success">
+	<section class="pageBlocks logoRow">
+		<a href="http://www.orobind.com/"><img src="http://cdn.orobind.com/srv/static/imagesV2/logo-white.png" class="logo"></a>
+	</section>
+	<section class="pageBlocks title container">
+		<div class="titleContainer col-sm-8">
+			<p class="successTitle">Awesome! We've received your request and we're working on it.</p>
+			<p class="desc">We'll get back to you shortly. While you're here, you might as well check out our website.</p>
+			<button class="successCta">Ok, take me to Orobind</button>
+		</div>
+		<div class="banner col-sm-4">
+			<a href="https://play.google.com/store/apps/details?id=com.orobind&hl=en"><img class="fullwidth" src="http://cdn.orobind.com/srv/static/imagesV2/banner.jpg"></a>
+		</div>
+	</section>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-54553092-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- Google Code for Marathon Conversion Page -->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 973220294;
+var google_conversion_language = "en";
+var google_conversion_format = "3";
+var google_conversion_color = "ffffff";
+var google_conversion_label = "jtlcCLGE-loQxtOI0AM";
+var google_remarketing_only = false;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/973220294/?label=jtlcCLGE-loQxtOI0AM&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+<!-- Facebook Conversion Code for Conversion 1 -->
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', '6023776506550', {'value':'0.00','currency':'INR'}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?ev=6023776506550&amp;cd[value]=0.00&amp;cd[currency]=INR&amp;noscript=1" /></noscript>
+	<script>
+		$(document).ready(function(){
+			var timeStart = new Date();
+			$('.successCta').click(function(e){
+				e.preventDefault();
+				e.stopPropagation();
+				//_trackEvent("demo campaign cta button", "click", true);
+				var timeClick = new Date();
+				var timeSpan = parseInt((timeClick.valueOf() - timeStart.valueOf())/1000);
+				//_gaq.push(['_trackEvent', 'demo campaign cta button', 'click', 'time elapsed', timeSpan]);
+				ga('send', 'event', 'demo campaign cta button', 'click', 'time elapsed', timeSpan);
+				setTimeout(function(){
+					window.location.href = "http://www.orobind.com/";
+				},350);
+			});
+		});
+	</script>
+	</body>
+</html>

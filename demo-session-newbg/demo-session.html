@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Stay Fit and Healthy</title>
+		<link rel="icon" type="image/ico" href="http://cdn.orobind.com/srv/static/imagesV2/favicon.ico">
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.min.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+		
+		<link href="css/demo.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+		<link href='http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
+	<!--include jquery-->
+	<script src="js/jquery.min.js"></script>
+	<!-- sumome include script -->
+	<script src="//load.sumome.com/" data-sumo-site-id="6ea10718c4cea43d02f3b105ec8fc7b2c0416bdda302fe4bcbc0b99b3958e005" async></script>
+	</head>
+	
+	<body>
+	<section class="pageBlocks logoRow">
+		<a href="http://www.orobind.com/"><img src="http://cdn.orobind.com/srv/static/imagesV2/logo-white.png" class="logo"></a>
+	</section>
+	<section class="pageBlocks title">
+		<div class="titleWrap">
+			<h1>Hate going to the gym? Now, you don't have to.</h1>
+			<p>We bring a better experience to your home. Book a free demo session with a personal fitness coach now.</p>
+		</div>
+	</section>
+	<section class="pageBlocks formRow">
+		<form class="landingForm" method="POST" action="demo-session/post">
+			<div class="nameBox box">
+				<input type="text" class="landingFormFields" placeholder="Your name" name="username">
+				<span class="status">&nbsp;</span>
+			</div>
+			<div class="phoneBox box">
+				<input type="text" class="landingFormFields" placeholder="Phone number" name="phone">
+				<span class="status">&nbsp;</span>
+			</div>
+			<div class="emailBox box">
+				<input type="text" class="landingFormFields" placeholder="Email" name="email">
+				<span class="status">&nbsp;</span>
+			</div>
+			<div class="submitBox box">
+				<button class="landingFormCta">Book Now</button>
+			</div>
+		</form>
+	</section>
+	
+	<!--<section class="pageBlocks metric">
+		<div class="metricWrap">
+			<p class="metricText">Till date, our users have lost <span class="metricValue">540+ Kilos</span></p>
+		</div>
+	</section>-->
+	
+	<script>
+	$(document).ready(function(){
+		$('.mediaThumb img').hover(function(){
+			var x = $(this).attr('data-switch');
+			var y = $(this).attr('src');
+			$(this).attr({'src': x, 'data-switch':y});
+		},
+		function(){
+			var x = $(this).attr('data-switch');
+			var y = $(this).attr('src');
+			$(this).attr({'src': x, 'data-switch':y});
+		});
+		$(document).mousedown(function(e){
+			clickedElem = e.target;
+		});
+		$('.landingFormFields').blur(function(e){
+			validate(this);
+		});
+		$('button.landingFormCta').click(function(e){
+		var thispar = $(this).parents('.landingForm');
+			if(validate(thispar.find('.nameBox .landingFormFields')) && validate(thispar.find('.phoneBox .landingFormFields')) && validate(thispar.find('.emailBox .landingFormFields')))
+			{
+				$('.landingForm').submit();
+			}
+			else
+			{
+				e.preventDefault(); e.stopPropagation();
+			}
+		});
+	});
+	function validate(obj)
+	{
+		value = $(obj).val();
+		par = $(obj).parent('.box');
+		if(par.hasClass("nameBox"))
+		{
+			if (value == '' || value.length < 3 || value.length > 45 || /^[a-zA-Z ]*$/.test(value) == false)
+			{
+				par.removeClass("successful").addClass("error");
+				return false;
+			}
+			else
+			{
+				par.removeClass("error").addClass("successful");
+				return true;
+			}
+		}
+		else if(par.hasClass("phoneBox"))
+		{
+			if (value == '' || value.length != 10 || isNaN(value))
+			{
+				par.removeClass("successful").addClass("error");
+				return false;
+			}
+			else
+			{
+				par.removeClass("error").addClass("successful");
+				return true;
+			}
+		}
+		else if(par.hasClass("emailBox"))
+		{
+			if (value == '' || value.length < 6 || !isNaN(value) || value.indexOf('@') == -1 || value.indexOf('.') == -1)
+			{
+				par.removeClass("successful").addClass("error");
+				return false;
+			}
+			else
+			{
+				par.removeClass("error").addClass("successful");
+				return true;
+			}
+		}
+	}
+	</script>
+	
+
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 950301677;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/950301677/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+
+<!-- Google Code for Remarketing Tag -->
+<!--------------------------------------------------
+Remarketing tags may not be associated with personally identifiable information or placed on pages related to sensitive categories. See more information and instructions on how to setup the tag on: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = 973220294;
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/973220294/?value=0&amp;guid=ON&amp;script=0"/>
+</div>
+</noscript>
+
+
+
+<!-- analytics code -->	
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54553092-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+
+<!-- fb remarketing pixel -->
+<script>(function() {
+  var _fbq = window._fbq || (window._fbq = []);
+  if (!_fbq.loaded) {
+    var fbds = document.createElement('script');
+    fbds.async = true;
+    fbds.src = '//connect.facebook.net/en_US/fbds.js';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(fbds, s);
+    _fbq.loaded = true;
+  }
+  _fbq.push(['addPixelId', '872006176179333']);
+})();
+window._fbq = window._fbq || [];
+window._fbq.push(['track', 'PixelInitialized', {}]);
+</script>
+<noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=872006176179333&amp;ev=PixelInitialized" /></noscript>
+
+	
+	</body>
+</html>

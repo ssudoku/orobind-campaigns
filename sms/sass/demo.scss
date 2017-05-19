@@ -1,0 +1,293 @@
+@import "definitions";
+@import "popup";
+@import "grid";
+
+body,html {
+	height:100%; min-height:100%;
+}
+html {
+	overflow-y:hidden;
+}
+body {
+	overflow:hidden; background-position:left center; background-attachment:fixed;
+	background-size:cover; background-repeat:no-repeat; overflow-y:auto;
+}
+.bg1 {
+	background-image:url(../images/1.jpg);
+}
+.bg2 {
+	background-image:url(../images/2.jpg);
+	background-position:42% center;
+}
+.bg3 {
+	background-image:url(../images/3.jpg);
+	background-position:29% center;
+}
+.bg4 {
+	position:relative;
+	&:before {
+		content:""; position: absolute; z-index: -1;
+		width: 200%; height: 200%; top: -50%; left: -50%;
+		background-image:url(../images/4.jpg);
+		-webkit-transform: rotate(90deg);
+		-moz-transform: rotate(90deg);
+		-ms-transform: rotate(90deg);
+		-o-transform: rotate(90deg);
+		transform: rotate(90deg);
+		background-position:40% 19%;
+	}
+}
+.bg5 {
+	background-image:url(../images/5.jpg);
+	background-position:left 5%; background-size:auto 125%;
+}
+.sidebar {
+	box-sizing:border-box; padding:25px; display:flex; justify-content:center; align-items:center;
+}
+@media screen and (min-width:768px) {
+	.wrapper, .sidebar {
+		height:100%; min-height:100%; float:left; overflow-y:auto;
+	}
+	.bg2 {
+		background-position:center top;
+	}
+	.bg4 {
+		background-image:url(../images/4.jpg);
+		&:before {
+			display:none;
+		}
+	}
+	.wrapper {
+		width:60%;
+	}
+	.sidebar {
+		width:40%;
+	}
+	.testimonialsWidget {
+		max-height:550px; overflow-y:auto; width:90%; margin-top:0;
+	}
+}
+.testimonialsWidget {
+	background:rgba(white,0.8); box-shadow:0 0 5px 0 rgba(black,0.3); 
+	width:100%; margin-top:25px; border-radius:5px;
+	.titleBar {
+		background:#48649F; color:white;padding:10px; overflow:hidden;
+		a {
+			color:white; font-weight:bold; text-decoration:none;
+		}
+	}
+	.testiTitle {
+		font-size:1em; font-weight:normal; border-bottom:1px solid #EEE;
+		padding:0.5em 10px; margin-bottom:1em;
+	}
+	.testimonialContainer {
+		
+	}
+	.testimonial {
+		padding:10px; padding-top:0; margin-bottom:10px;
+		border-bottom:1px solid #EEE; overflow:hidden; position:relative;
+		&:first-child {
+			margin-top:20px;
+		}
+		&:last-child {
+			margin-bottom:0; border-bottom:0; padding-bottom:20px;
+		}
+	}
+	.user{
+		position:absolute; top:0; left:10px;
+	}
+	.content {
+		padding-left:65px; font-size:0.875em;
+	}
+	.userImg {
+		display:block; width:50px; height:50px; border-radius:50px;
+		box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+	}
+	.userName {
+		text-decoration:none; font-weight:bold; color:#48649F; margin-bottom:10px; display:block;
+	}
+	.userRating {
+		background: #09E; display: inline-block; border-radius: 50px; color: #FFF;
+		padding: 1px 8px; font-weight: normal;
+		i {
+			font-weight:0.875em;
+		}
+	}
+	.likeBar {
+		background:#F6F7F8; padding:10px; margin-top:10px;
+		font-size:0.875em; border:1px solid darken(#F6F7F8,5%);
+	}
+	.likeImg {
+		height:10px; width:auto; margin-right:5px;
+	}
+}
+strong {
+	font-weight:900;
+}
+.hidden {
+	display:none;
+}
+.logoRow {
+	padding:20px 20px 0 20px; text-align:center; margin-bottom:20px;
+	.logo {
+		height:30px; width:auto;
+	}
+}
+.errorMsg {
+	color:white; text-align:center;
+	a {
+		color:inherit;
+		&:visited {
+			color:white;
+		}
+	}
+}
+.applink {
+	color:white; line-height:2; padding: 10px; border:2px solid white; margin-left:20px;
+	text-decoration: none; font-family: $body-font; font-weight: 700;
+}
+.title {
+	padding:20px; color:white; display:flex; margin-bottom:10px;
+	flex-direction:row; justify-content:center; align-items:center;
+	h1 {
+		margin-bottom:30px; font-weight:bold; font-size:1.5em; text-align:center;
+	}
+	p {
+		font-size:1.125em; line-height:1.8; margin-bottom:10px; font-family: 'Roboto', sans-serif; text-align:center;
+		&.desc {
+			font-size: 1.5em; margin-bottom: 25px;
+		}
+	}
+}
+.formRow, .finalCta {
+	display:flex; justify-content:center; align-items:center; flex-direction:column;
+	.landingFormFields, .landingFormCta {
+		height:50px; padding:10px; box-sizing:border-box;
+	}
+	.landingFormCta {
+		background:#EC2929/*#FF8B00*/; color:white; border-radius:0; font-weight:700;
+	}
+	.formHeading{
+		width:100%;	text-align:center; color:white;
+	}
+	.box {
+		position:relative; display:inline-block;
+		.status {
+			display:none; position:absolute; z-index:10;
+			right:10px; top:22px; width:16px; height:14px;
+			background:url("http://cdn.orobind.com/srv/static/imagesV2/rightwrong.png"); background-position:0 0;
+		}
+		&.error, &.successful {
+			.status {
+				display:inline-block;
+			}
+		}
+		&.error {
+			.status {
+				background-position:0 15px;
+			}
+		}
+	}
+}
+.testimonials .testimonialsWrap{
+	width:100%; color:white;
+	ul{
+		text-align:center;
+	}
+	li{
+		width:30%; display:inline-block; margin-bottom:20px; margin-right:5%; margin-left:5%; vertical-align:top; text-align:left;
+	}
+}
+.postForm {
+	display:flex; flex-direction:row; justify-content:center; align-items:center;
+	p {
+		font-size:1.5em; line-height:1.8; color:white; text-align:center;
+	}
+}
+.centerWrap {
+	width:100%; margin:auto;
+}
+.sectionTitle {
+	text-align:center;
+}
+@media screen and (min-width:768px) {
+	.metric {
+		padding-top:15px;
+		text-shadow: 0 0 5px rgba(black,0.6);
+	}
+	.titleWrap {
+		text-align:center;
+		width:80%; padding-top:40px;
+		text-shadow: 0 0 5px rgba(black,0.6);
+	}
+	.logoRow {
+		padding:60px 20px 0 20px;
+		.logo {
+			height:35px;
+		}
+	}
+	.title {
+		h1 {
+			font-size:3em; font-weight:normal; margin-bottom:15px;
+		}
+		p {
+			font-size:1.35em; margin-bottom:0;
+		}
+	}
+	.formRow, .finalCta {
+		text-align:right;
+		.box {
+			display:block;
+		}
+		.landingForm {
+			display:flex; flex-direction:row; justify-content:center; align-items:center;
+		}
+		.landingFormFields, .landingFormCta {
+			margin-bottom:0;
+		}
+		.nameBox .landingFormFields {
+			width:175px;
+		}
+		.phoneBox .landingFormFields {
+			width:150px;
+		}
+		.emailBox .landingFormFields {
+			width:200px;
+		}
+		.submitBox .landingFormCta {
+			width:125px;
+		}
+	}
+}
+@media screen and (min-width:992px) {
+	.titleWrap {
+		width:75%;
+		.brwide:after {
+			content:''; clear:both;
+			display:block;
+		}
+	}
+	body.success .container {
+		width:880px;
+	}
+	.formRow, .finalCta {
+		.landingFormFields, .landingFormCta {
+			height:50px; padding:12px;
+		}
+		.nameBox .landingFormFields,
+		.phoneBox .landingFormFields {
+			width:225px;
+		}
+		.emailBox .landingFormFields {
+			width:275px;
+		}
+		.submitBox .landingFormCta {
+			width:125px;
+		}
+	}
+	section.finalCta {
+		.sectionTitle {
+			margin-bottom:0;
+		}
+	}
+}

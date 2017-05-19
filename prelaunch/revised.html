@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Orobind</title>
+		<link rel="icon" type="image/ico" href="images/favicon.ico">
+		
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.min.js"></script>
+			<script src="js/respond.min.js"></script>
+		<![endif]-->
+		
+		<link href="css/grid.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/flexslider.css" rel="stylesheet">
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Lato:400,700,900' rel='stylesheet' type='text/css'>
+	</head>
+	
+	<body>
+	<div class="topwrap">
+	<section class="pageBlocks container-fluid pageTop">
+		<div class="row clearfix">
+			<img src="images/logo-white.png" class="logo">
+		</div>
+	</section>
+	<section class="pageBlocks container-fluid title">
+		<div class="col md-7 col-sm-8 col-xs-10 col-tn-12">
+			<h1>lose weight | get fit</h1>
+			<p>Set goals. Access coaches. Create fitness plans</p>
+		</div>
+	</section>
+	<section class="pageBlocks container-fluid signup">
+		<div class="col md-7 col-sm-8 col-xs-9 col-tn-10">
+			<form>
+				<input type="text" placeholder="your email address here">
+				<button>get early access</button>
+			</form>
+		</div>
+	</section>
+	<section class="pageBlocks container-fluid indicator tright">
+		<img class="downarrow" src="images/arrow-down.png">
+	</section>
+	</div>
+	<div class="bottomwrap">
+	<section class="pageBlocks container-fluid about">
+		<h2>Marketplace of personal fitness coaches<span class="breaksm"> </span>to enable you to lose weight.</h2>
+	</section>
+	<section class="pageBlocks container-fluid testimonial">
+		<div class="flexslider">
+			<ul class="slides">
+				<li>
+					<div class="testimonial-container">
+						<div class="user col-lg-3 col-sm-4">
+							<img src="images/bhavjot.jpg" class="userpic">
+							<strong>Bhavjot Kaur</strong>
+							<div class="boxedtwitter"><img src="images/tw.gif"> <span>@bhavjotk</span></div>
+						</div>
+						<div class="content col-lg-9 col-sm-8">
+							<p>When my weight ticked at 90 kgs, it was a wake up call! I signed up for a trial programme at Orobind.com. They've provided me a certified personal coach and changed my entire lifestyle, in result I lost 15 kgs in 6 months. Now I can explore new places, wear dresses which I never imagined I could. I can’t thank Orobind enough for transforming me into a fitter and stronger person.</p>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="testimonial-container">
+						<div class="user col-lg-3 col-sm-4">
+							<img src="images/deepak.jpg" class="userpic">
+							<strong>Deepak Ray</strong>
+							<div class="boxedtwitter"><img src="images/tw.gif"> <span>@grafitea</span></div>
+						</div>
+						<div class="content col-lg-9 col-sm-8">
+							<p>Orobind has been a great experience. The best thing about Orobind was their focus on individual needs. They considered my current lifestyle and what I can and can't do.  These guys not only helped with my training but also with nutrition. This is helping me in making a smoother transition into a fitter life, as they say fitness is a lifestyle.</p>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="pageBlocks container-fluid bottomsignup">
+		<h1>signup now</h1>
+		<form>
+			<input type="text" placeholder="your email address here">
+			<button>get early access</button>
+		</form>
+	</section>
+	<!--<section class="pageBlocks container-fluid logoband">
+		<div class="bandleft">
+			<img src="images/phone.png" class="icons">
+			<span class="phone">9739697210</span>
+		</div>
+		<img src="images/logo.png" class="bandlogo" style="visibility:hidden;">
+		<div class="bandright">
+			<a href="#"><img src="images/facebook.png" class="social icons"></a>
+			<a href="#"><img src="images/twitter.png" class="social icons"></a>
+		</div>
+	</section>-->
+	</div>
+	<!--include jquery-->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/flexslider.min.js"></script>
+	<script>
+		/*var x = $('.logoband').offset().top;
+		$(window).scroll(function(){
+			var y = $(window).scrollTop();
+			if (y > x){
+				if ($('.logoband').hasClass('fixed') == false){
+					$('.logoband').addClass('fixed');
+					$('.about').addClass('extra');
+				}
+			}
+			else {
+				if ($('.logoband').hasClass('fixed') == true){
+					$('.logoband').removeClass('fixed');
+					$('.about').removeClass('extra');
+				}
+			}
+		});*/
+		$(document).ready(function(){
+			$('.downarrow').click(function(){
+				var dest = $('.about').offset().top;
+				var diff = parseInt(dest) + 'px';
+				$('html,body').animate({scrollTop : diff }, 300);
+			});
+		});
+		$(window).load(function() {
+			$('.flexslider').flexslider({
+				animation: "slide",
+				controlNav: false,
+				slideshowSpeed: 10000,
+				animationSpeed: 800,
+				pauseOnHover: false
+			});
+		});
+	</script>
+	</body>
+</html>

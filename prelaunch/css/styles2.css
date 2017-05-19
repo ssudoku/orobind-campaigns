@@ -1,0 +1,160 @@
+body {
+	margin:0; padding:0;
+	border:0; height:100%;
+	font-size:16px; line-height:1.5;
+	font-family: 'Lato', Helvetica, sans-serif;
+}
+.fullwidth {
+	width:100%;
+}
+img.fullwidth {
+	height:auto;
+	display:block;
+}
+.clearfix:after {
+	content:'';
+	display:table;
+	clear:both;
+	zoom:1;
+}
+.pageTop {
+	border-bottom:1px solid #DDD;
+	margin-bottom:100px;
+}
+.logo {
+	padding:15px 0;
+	height:auto; width:100%;
+}
+.message img {
+	height: 250px;
+	width:auto;
+}
+.tright {
+	text-align:right;
+}
+.tcenter {
+	text-align:center;
+}
+.tleft {
+	text-align:left;
+}
+.message h2, .referral h2 {
+	font-size:2em; font-family: 'Roboto Slab', Courier New, serif;
+	font-weight:normal;
+}
+.referral h3 {
+	font-size:2em;
+	font-weight:300;
+}
+.referral .wrapper {
+	float:none;
+	margin:auto;
+}
+.socialicons {
+	margin:auto; width:100%;
+	display:inline-block;
+	vertical-align:middle;
+	margin-top:4px;
+}
+.referral .social {
+	display:inline-block;
+	margin:10px;
+	vertical-align:middle;
+}
+.shortlink {
+	display:inline-block;
+	margin:0 10px 20px 10px; width:250px;
+	vertical-align:middle;
+	padding:12px; line-height:1;
+	text-decoration:underline;
+	color:blue;
+}
+.referral p {
+	font-size:1.5em;
+	font-weight:300;
+}
+.notification {
+	font-weight:300;
+	color:#666;
+}
+@media screen and (max-width:480px) {
+	.pageTop .row div {
+		float:none;
+		text-align:center;
+		margin:auto;
+	}
+	.pageTop {
+		margin-bottom:20px;
+	}
+	.referral h3 {
+		font-size:1.375em;
+	}
+	.referral p {
+		font-size:1.25em;
+	}
+	.referral h2 {
+		font-size:1.5em;
+	}
+}
+@media screen and (min-width:480px) {
+	
+	.pageTop {
+		margin-bottom:30px;
+	}
+	.referral h3 {
+		font-size:1.5em;
+	}
+	.referral p {
+		font-size:1.5em;
+	}
+	.referral h2 {
+		font-size:1.75em;
+	}
+}
+@media screen and (min-width:768px) {
+	.tright-sm {
+		text-align:right;
+	}
+	.tleft-sm {
+		text-align:left;
+	}
+	.tcenter-sm {
+		text-align:center;
+	}
+	.pageTop {
+		margin-bottom:40px;
+	}
+	.referral h3 {
+		font-size:1.5em;
+	}
+	.referral p {
+		font-size:1.5em;
+	}
+	.referral h2 {
+		font-size:2em;
+	}
+	.notification p {
+		margin-top:45px;
+	}
+}
+@media screen and (min-width:992px) {
+	span.br:after {
+		display:block;
+		content:'';
+	}
+	.pageTop {
+		margin-bottom:30px;
+	}
+	.referral h3 {
+		font-size:1.6em;
+	}
+	.referral p {
+		font-size:1.6em;
+	}
+	.referral h2 {
+		font-size:2em;
+	}
+	.notification p {
+		margin-top:50px;
+	}
+}
